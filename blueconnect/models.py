@@ -19,7 +19,7 @@ def transform_value(value, value_type):
     if isinstance(value, list):
         item_type = value_type.__args__[0]
         return [transform_value(item, item_type) for item in value]
-    if hasattr(value_type, 'from_json'):
+    if hasattr(value_type, "from_json"):
         return value_type.from_json(value)
     return value_type(value)
 
@@ -48,6 +48,7 @@ class ModelBase:
 @dataclass
 class BlueDevice(ModelBase):
     """Model for a Blue Connect device."""
+
     serial: str
     hw_generation: int
     hw_product_type: str
@@ -59,6 +60,7 @@ class BlueDevice(ModelBase):
 
 class MeasurementTrend(Enum):
     """Enum for a measurement trend."""
+
     STABLE = "stable"
     INCREASE = "increase"
     DECREASE = "decrease"
@@ -67,6 +69,7 @@ class MeasurementTrend(Enum):
 @dataclass
 class SwimmingPoolMeasurement(ModelBase):
     """Model for a swimming pool measurement."""
+
     name: str
     priority: int
     timestamp: datetime
@@ -85,10 +88,11 @@ class SwimmingPoolMeasurement(ModelBase):
 @dataclass
 class SwimmingPoolLastMeasurements(ModelBase):
     """Model for swimming pool last measurements data."""
+
     status: str
     swimming_pool_id: str
     data: List[SwimmingPoolMeasurement]
-    blue_device_serial: str = ''
+    blue_device_serial: str = ""
     last_blue_measure_timestamp: datetime = None
     last_strip_timestamp: datetime = None
 
@@ -101,6 +105,7 @@ class SwimmingPoolLastMeasurements(ModelBase):
 @dataclass
 class UserInfo(ModelBase):
     """Model for UserInfo."""
+
     user_id: str
     first_name: str
     last_name: str
@@ -110,6 +115,7 @@ class UserInfo(ModelBase):
 
 class TemperatureUnit(Enum):
     """Enum for TemperatureUnit."""
+
     CELSIUS = "celsius"
     FAHRENHEIT = "fahrenheit"
 
@@ -117,6 +123,7 @@ class TemperatureUnit(Enum):
 @dataclass
 class UserPreferences(ModelBase):
     """Model for UserPreferences."""
+
     display_temperature_unit: TemperatureUnit
     display_unit_system: str
     main_swimming_pool_id: str
@@ -125,6 +132,7 @@ class UserPreferences(ModelBase):
 @dataclass
 class User(ModelBase):
     """Model for a User."""
+
     user_info: UserInfo
     user_preferences: UserPreferences
 
@@ -132,6 +140,7 @@ class User(ModelBase):
 @dataclass
 class SwimmingPool(ModelBase):
     """Model for a SwimmingPool."""
+
     updated: datetime
     swimming_pool_id: str
     created: datetime
@@ -142,6 +151,7 @@ class SwimmingPool(ModelBase):
 @dataclass
 class SwimmingPoolStatusTask(ModelBase):
     """Model for a SwimmingPoolStatusTask."""
+
     status_id: str
     since: datetime
     data: dict
@@ -155,6 +165,7 @@ class SwimmingPoolStatusTask(ModelBase):
 @dataclass
 class SwimmingPoolStatus(ModelBase):
     """Model for SwimmingPoolStatus."""
+
     since: datetime
     status_id: str
     global_status_code: str
@@ -170,6 +181,7 @@ class SwimmingPoolStatus(ModelBase):
 @dataclass
 class SwimmingPoolFeedMessage(ModelBase):
     """Model for a SwimmingPoolFeedMessage."""
+
     id: str
     title: str
     message: str
@@ -178,6 +190,7 @@ class SwimmingPoolFeedMessage(ModelBase):
 @dataclass
 class SwimmingPoolFeed(ModelBase):
     """Model for a SwimmingPoolFeedMessage."""
+
     swimming_pool_id: str
     timestamp: datetime
     data: List[SwimmingPoolFeedMessage]

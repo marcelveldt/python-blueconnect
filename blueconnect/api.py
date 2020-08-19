@@ -1,7 +1,6 @@
 """Unofficial python library for the Blue Riiot Blue Connect API."""
 
 import asyncio
-import logging
 import time
 from typing import List, Optional
 
@@ -25,7 +24,6 @@ BASE_HEADERS = {
     "Accept": "*/*",
 }
 BASE_URL = "https://api.riiotlabs.com/prod/"
-LOGGER = logging.getLogger()
 
 
 class BlueConnectApi:
@@ -35,9 +33,7 @@ class BlueConnectApi:
         """Inititialize the api connection, a valid username and password must be provided."""
         self._username = username
         self._password = password
-        self._http_session = aiohttp.ClientSession(
-            connector=aiohttp.TCPConnector()
-        )
+        self._http_session = aiohttp.ClientSession(connector=aiohttp.TCPConnector())
         self._token_info = {}
 
     def close(self) -> None:
@@ -71,12 +67,16 @@ class BlueConnectApi:
         data = await self.__get_data(f"swimming_pool/{swimming_pool_id}")
         return SwimmingPool.from_json(data)
 
-    async def get_swimming_pool_status(self, swimming_pool_id: str) -> SwimmingPoolStatus:
+    async def get_swimming_pool_status(
+        self, swimming_pool_id: str
+    ) -> SwimmingPoolStatus:
         """Retrieve status for a specific swimming pool."""
         data = await self.__get_data(f"swimming_pool/{swimming_pool_id}/status")
         return SwimmingPoolStatus.from_json(data)
 
-    async def get_swimming_pool_blue_devices(self, swimming_pool_id: str) -> List[BlueDevice]:
+    async def get_swimming_pool_blue_devices(
+        self, swimming_pool_id: str
+    ) -> List[BlueDevice]:
         """Retrieve Blue devices for a specific swimming pool."""
         data = await self.__get_data(f"swimming_pool/{swimming_pool_id}/blue")
         result = []
@@ -85,14 +85,18 @@ class BlueConnectApi:
             result.append(blue_device)
         return result
 
-    async def get_swimming_pool_feed(self, swimming_pool_id: str, language: str = "en") -> SwimmingPoolFeed:
+    async def get_swimming_pool_feed(
+        self, swimming_pool_id: str, language: str = "en"
+    ) -> SwimmingPoolFeed:
         """Retrieve feed for a specific swimming pool."""
         data = await self.__get_data(
             f"swimming_pool/{swimming_pool_id}/feed?lang={language}"
         )
         return SwimmingPoolFeed.from_json(data)
 
-    async def get_last_measurements(self, swimming_pool_id: str, blue_device_serial: str) -> SwimmingPoolLastMeasurements:
+    async def get_last_measurements(
+        self, swimming_pool_id: str, blue_device_serial: str
+    ) -> SwimmingPoolLastMeasurements:
         """Retrieve last measurements for a specific swimming pool."""
         data = await self.__get_data(
             f"swimming_pool/{swimming_pool_id}/blue/{blue_device_serial}/lastMeasurements?mode=blue_and_strip"
@@ -135,5 +139,8 @@ class BlueConnectApi:
         ) as response:
             if response.status != 200:
                 error_msg = await response.text()
-                raise Exception("Error while retrieving data for endpoint %s: %s" % (endpoint, error_msg))
+                raise Exception(
+                    "Error while retrieving data for endpoint %s: %s"
+                    % (endpoint, error_msg)
+                )
             return await response.json()

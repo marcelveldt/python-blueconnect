@@ -1,7 +1,6 @@
 """Unofficial python library for the Blue Riiot Blue Connect API."""
 
 import asyncio
-import logging
 from typing import List
 
 from .api import BlueConnectApi
@@ -12,8 +11,6 @@ from .models import (
     SwimmingPoolMeasurement,
     TemperatureUnit,
 )
-
-LOGGER = logging.getLogger()
 
 
 class BlueConnectSimpleAPI:
@@ -39,12 +36,17 @@ class BlueConnectSimpleAPI:
         main_pool_id = user_info.user_preferences.main_swimming_pool_id
         self._temperature_unit = user_info.user_preferences.display_temperature_unit
         self._pool_info = await self._api.get_swimming_pool(main_pool_id)
-        self._pool_feed_message = (await self._api.get_swimming_pool_feed(main_pool_id, self._language)).current_message
+        self._pool_feed_message = (
+            await self._api.get_swimming_pool_feed(main_pool_id, self._language)
+        ).current_message
         blue_devices = await self._api.get_swimming_pool_blue_devices(main_pool_id)
         self._pool_blue_device = blue_devices[0] if blue_devices else None
         if self._pool_blue_device:
-            self._pool_measurements = (await self._api.get_last_measurements(
-                main_pool_id, self._pool_blue_device.serial)).measurements
+            self._pool_measurements = (
+                await self._api.get_last_measurements(
+                    main_pool_id, self._pool_blue_device.serial
+                )
+            ).measurements
 
     @property
     def pool(self) -> SwimmingPool:
