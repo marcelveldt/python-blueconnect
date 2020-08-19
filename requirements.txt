@@ -1,4 +1,4 @@
 aiohttp
 aws_request_signer
-dateutil
+python-dateutil
 inflection
