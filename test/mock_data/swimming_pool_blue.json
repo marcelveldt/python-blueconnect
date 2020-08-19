@@ -1,0 +1,48 @@
+{
+    "__description__": "call to <api_base_url>/swimming_pool/<pool_id>/blue",
+    "data": [
+        {
+            "created": "2020-07-31T15:27:00.299Z",
+            "blue_device": {
+                "contract_servicePlan": "plus",
+                "sleep_state": "awake",
+                "hw_bundle_extender": false,
+                "contract_isGo": true,
+                "hw_region": "eu",
+                "contract_isBasic": false,
+                "sf_rc": "rc1",
+                "wake_period": 4320,
+                "SN": "1234567890",
+                "last_measure_message_ble": "2020-08-15T10:34:48.511Z",
+                "sf_rc_country": "NL",
+                "hw_type": "go",
+                "reseller_channel": "gre_01",
+                "fs_beacon_enabled": true,
+                "contract_isSwaUs": false,
+                "last_measure_message_sigfox": "2020-08-17T16:45:20.000Z",
+                "hw_generation": 2,
+                "hw_color": "white",
+                "last_measure_message": "2020-08-17T16:45:20.000Z",
+                "production_datetime": "2020-05-18T00:00:00.000Z",
+                "serial": "123456789",
+                "fs_sigfox_enabled": true,
+                "contract_isVpcEligible": false,
+                "location": {
+                    "support": "none",
+                    "location": "pool"
+                },
+                "battery_low": false,
+                "sigfox_geoloc": {
+                    "country_name": "Netherlands",
+                    "country": "528",
+                    "country_code_iso": "NL",
+                    "timestamp": "2020-08-17T16:45:20.000Z"
+                }
+            },
+            "user_id": "eu-west-1:07fbfaa0-5012-48d4-a57b-f632d7c019ee",
+            "blue_device_serial": "123456789",
+            "role": "IS_OWNER",
+            "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db"
+        }
+    ]
+}

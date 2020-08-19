@@ -1,0 +1,44 @@
+{
+    "__description__": "GET call to <api_base_url>/url",
+    "userInfo": {
+        "userIdentityId": "eu-west-1:07fbfaa0-5012-48d4-a57b-f632d7c019ee",
+        "userId": "example@example.com",
+        "firstName": "Example",
+        "lastName": "Example",
+        "email": "example@example.com",
+        "accepted_last_eula": true,
+        "account_type": "Email"
+    },
+    "userPreferences": {
+        "display_temperature_unit": "celsius",
+        "display_unit_system": "metric",
+        "notifications": {
+            "user_id": "eu-west-1:07fbfaa0-5012-48d4-a57b-f632d7c019ee",
+            "alerts_mail_enabled": false,
+            "measurement_frequency": "every_day",
+            "alerts_push_enabled": true,
+            "measurement_mail_enabled": false,
+            "measurement_hour": 11,
+            "measurement_push_enabled": false
+        },
+        "main_swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db"
+    },
+    "currentEula": {
+        "url": "https://s3-eu-west-1.amazonaws.com/riiotlabsassets/eula/1.0/{lang}.html",
+        "version": "1.0",
+        "available_languages": [
+            "fr",
+            "es",
+            "en",
+            "nl",
+            "de",
+            "it",
+            "pt",
+            "cs"
+        ]
+    },
+    "userModuleAccess": {
+        "va_config": true,
+        "autom_targets_config": true
+    }
+}

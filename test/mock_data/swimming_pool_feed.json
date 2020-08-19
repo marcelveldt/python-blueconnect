@@ -1,0 +1,13 @@
+{
+    "__description__": "call to <api_base_url>/swimming_pool/<pool_id>/feed?lang=en",
+    "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+    "timestamp": "2020-08-17T17:32:12.612Z",
+    "data": [
+        {
+            "id": "SWP_OK",
+            "title": "Enjoy!",
+            "message": "Water quality is at the top!"
+        }
+    ],
+    "lang": "en"
+}

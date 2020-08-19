@@ -1,0 +1,54 @@
+{
+    "__description__": "call to <api_base_url>/swimming_pool/<pool_id>/status",
+    "since": "2020-08-16T08:21:19.687Z",
+    "status_id": "7f177af4-6148-4134-abf9-c035da5fc7ec",
+    "global_status_code": "SP_OK",
+    "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+    "created": "2020-08-17T16:45:47.712Z",
+    "tasks": [
+        {
+            "status_id": "7f177af4-6148-4134-abf9-c035da5fc7ec",
+            "since": "2020-07-31T15:43:51.305Z",
+            "data": "{\"lastMeasure\":\"2020-08-17T16:45:20.000Z\",\"isSigfox\":true}",
+            "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+            "created": "2020-08-17T16:45:47.712Z",
+            "task_identifier": "BLUE_ONLINE",
+            "update_reason": "newMeasure",
+            "order": 50
+        },
+        {
+            "status_id": "7f177af4-6148-4134-abf9-c035da5fc7ec",
+            "since": "2020-07-31T15:43:51.305Z",
+            "data": "{\"current_value\":28.2,\"swp_range\":{\"ok_min\":20,\"ok_max\":40,\"warning_high\":50,\"warning_low\":5,\"ideal\":27}}",
+            "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+            "created": "2020-08-17T16:45:47.712Z",
+            "task_identifier": "TEMPERATURE_OK",
+            "update_reason": "newMeasure",
+            "order": -1
+        },
+        {
+            "status_id": "7f177af4-6148-4134-abf9-c035da5fc7ec",
+            "since": "2020-07-31T15:43:51.305Z",
+            "data": "{\"current_value\":7.6,\"swp_range\":{\"ok_min\":7.2,\"ok_max\":7.6,\"warning_high\":8.4,\"warning_low\":6.6,\"ideal\":7.3}}",
+            "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+            "created": "2020-08-17T16:45:47.712Z",
+            "task_identifier": "PH_OK",
+            "update_reason": "newMeasure",
+            "order": -1
+        },
+        {
+            "status_id": "7f177af4-6148-4134-abf9-c035da5fc7ec",
+            "since": "2020-08-16T08:21:19.687Z",
+            "data": "{\"current_value\":691,\"swp_range\":{\"ok_min\":650,\"ok_max\":750,\"warning_high\":900,\"warning_low\":400,\"ideal\":700}}",
+            "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+            "created": "2020-08-17T16:45:47.712Z",
+            "task_identifier": "ORP_OK",
+            "update_reason": "newMeasure",
+            "order": -1
+        }
+    ],
+    "update_reason": "newMeasure",
+    "blue_device_serial": "123456789",
+    "last_notif_date": "2020-08-16T08:21:19.764Z",
+    "swimming_pool_name": "Example Pool"
+}

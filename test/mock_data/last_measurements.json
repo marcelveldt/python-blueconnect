@@ -1,0 +1,54 @@
+{
+    "__description__": "call to <api_base_url>/swimming_pool/<pool_id>/blue/<blue_serial>/lastMeasurements?mode=blue_and_strip",
+    "status": "OK",
+    "last_blue_measure_timestamp": "2020-08-17T17:57:21.000Z",
+    "blue_device_serial": "1234567890",
+    "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+    "data": [
+        {
+            "name": "temperature",
+            "priority": 10,
+            "timestamp": "2020-08-17T17:57:21.000Z",
+            "expired": false,
+            "value": 27.9,
+            "trend": "decrease",
+            "ok_min": 20,
+            "ok_max": 40,
+            "warning_high": 50,
+            "warning_low": 5,
+            "gauge_max": 50,
+            "gauge_min": 0,
+            "issuer": "sigfox"
+        },
+        {
+            "name": "ph",
+            "priority": 20,
+            "timestamp": "2020-08-17T17:57:21.000Z",
+            "expired": false,
+            "value": 7.6,
+            "trend": "stable",
+            "ok_min": 7.2,
+            "ok_max": 7.6,
+            "warning_high": 8.4,
+            "warning_low": 6.6,
+            "gauge_max": 10,
+            "gauge_min": 5,
+            "issuer": "sigfox"
+        },
+        {
+            "name": "orp",
+            "priority": 30,
+            "timestamp": "2020-08-17T17:57:21.000Z",
+            "expired": false,
+            "value": 685,
+            "trend": "stable",
+            "ok_min": 650,
+            "ok_max": 750,
+            "warning_high": 900,
+            "warning_low": 400,
+            "gauge_max": 1000,
+            "gauge_min": 300,
+            "issuer": "sigfox"
+        }
+    ]
+}

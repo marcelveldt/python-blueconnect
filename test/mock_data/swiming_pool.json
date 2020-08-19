@@ -1,0 +1,201 @@
+{
+    "__description__": "call to <api_base_url>/swimming_pool/<pool_id>",
+    "updated": "2020-08-13T23:43:56.998Z",
+    "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+    "chemical": {},
+    "created": "2020-07-31T15:26:41.621Z",
+    "custom_settings": {
+        "measure_ranges": {
+            "temperature": {},
+            "ph": {},
+            "orp": {},
+            "conductivity": {}
+        }
+    },
+    "sigfox_global_coverage": {
+        "robustness": 3,
+        "score": 36,
+        "margins": [
+            43,
+            41,
+            39
+        ],
+        "redundancy": 3,
+        "level": 8
+    },
+    "characteristics": {
+        "volume": {
+            "width": 3.00,
+            "length": 6.00,
+            "depth": 1.50,
+            "shape": "Rectangle",
+            "capacity": 27
+        },
+        "uv_sanitizing": {},
+        "configuration": {
+            "_type": "Aboveground",
+            "construction_year": "2020",
+            "location": "Outdoor",
+            "kind": "SwimmingPool",
+            "waterproofing": "Liner"
+        },
+        "sanitizer": {
+            "chemical": "Chlorine",
+            "process": "Manuel"
+        },
+        "equipment": {
+            "heatings": [
+                "Heat Pump"
+            ],
+            "protections": [
+                "BubbleBlanket"
+            ],
+            "cleanings": [
+                "Manual"
+            ],
+            "filtrations": [
+                "Glass"
+            ]
+        },
+        "geoloc": {
+            "country": "Netherlands",
+            "country_code": "NL",
+            "administrative_area_level_2": {
+                "long_name": "Example City",
+                "short_name": "Example City"
+            },
+            "city": "'Example City",
+            "administrative_area_level_1": {
+                "long_name": "Example State",
+                "short_name": "EX"
+            },
+            "lon": 1.000000000000000,
+            "lat": 1.000000000000000,
+            "zip_code": "1234"
+        },
+        "ph_regulation": {},
+        "filter_pump": {
+            "is_present": true,
+            "operating_type": "Scheduled",
+            "operating_hours": [
+                {
+                    "start": "2020-07-31T06:00:00Z",
+                    "end": "2020-07-31T18:00:00Z"
+                }
+            ]
+        },
+        "picture": {}
+    },
+    "name": "Example Pool",
+    "chemistry": {
+        "activeChemicalPackId": "riiot_generic",
+        "canSelectChemicalPack": false
+    },
+    "last_refresh_status": "2020-08-17T02:22:30.258Z",
+    "user_access": {
+        "role": "FIRST_ADMINISTRATOR",
+        "canDeleteSwimmingPool": true,
+        "canModifySwimmingPool": true,
+        "canCreateInviteToken": true
+    },
+    "data_validation": {
+        "measure_ranges": {
+            "ph": {
+                "min": 6.8,
+                "max": 8,
+                "delta": 0.1
+            },
+            "orp": {
+                "min": 600,
+                "max": 800,
+                "delta": 10
+            },
+            "temperature": {
+                "min": 10,
+                "max": 45,
+                "delta": 1
+            },
+            "salinity": {
+                "min": 0,
+                "max": 15,
+                "delta": 0.5
+            }
+        },
+        "automation_targets": {
+            "ph": {
+                "min": 6.8,
+                "max": 8,
+                "delta": 0.1
+            },
+            "orp": {
+                "min": 600,
+                "max": 800,
+                "delta": 10
+            },
+            "temperature": {
+                "min": 10,
+                "max": 45,
+                "delta": 1
+            },
+            "salinity": {
+                "min": 0,
+                "max": 15,
+                "delta": 0.5
+            }
+        }
+    },
+    "data_default": {
+        "measure_ranges": {
+            "ph": {
+                "custom_applied": false,
+                "min": 7.2,
+                "max": 7.6,
+                "ideal": 7.3
+            },
+            "orp": {
+                "custom_applied": false,
+                "min": 650,
+                "max": 750,
+                "ideal": 700
+            },
+            "conductivity": {
+                "custom_applied": false,
+                "min": 300,
+                "max": 10000,
+                "ideal": 1500
+            },
+            "salinity": {
+                "custom_applied": false,
+                "min": 4,
+                "max": 6,
+                "ideal": 5
+            },
+            "temperature": {
+                "custom_applied": false,
+                "min": 20,
+                "max": 40,
+                "ideal": 27
+            }
+        },
+        "automation_targets": {
+            "ph": {
+                "custom_applied": false,
+                "target": 7.3,
+                "repeat_too_high": false,
+                "repeat_too_low": false
+            },
+            "orp": {
+                "custom_applied": false,
+                "target": 700,
+                "repeat_too_high": false,
+                "repeat_too_low": false
+            },
+            "temperature": {
+                "custom_applied": false,
+                "target": 27,
+                "repeat_too_high": false,
+                "repeat_too_low": false
+            }
+        }
+    }
+}

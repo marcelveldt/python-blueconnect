@@ -1,0 +1,106 @@
+{
+    "__description__": "call to <api_base_url>/swimming_pool",
+    "data": [
+        {
+            "created": "2020-07-31T15:26:41.621Z",
+            "user_id": "eu-west-1:07fbfaa0-5012-48d4-a57b-f632d7c019ee",
+            "swimming_pool": {
+                "chemistry": {
+                    "activeChemicalPackId": "riiot_generic",
+                    "canSelectChemicalPack": false
+                },
+                "last_refresh_status": "2020-08-17T02:22:30.258Z",
+                "characteristics": {
+                    "volume": {
+                        "width": 3.00,
+                        "length": 6.00,
+                        "depth": 1.50,
+                        "shape": "Rectangle",
+                        "capacity": 27
+                    },
+                    "uv_sanitizing": {},
+                    "configuration": {
+                        "_type": "Aboveground",
+                        "construction_year": "2020",
+                        "location": "Outdoor",
+                        "kind": "SwimmingPool",
+                        "waterproofing": "Liner"
+                    },
+                    "sanitizer": {
+                        "chemical": "Chlorine",
+                        "process": "Manuel"
+                    },
+                    "equipment": {
+                        "heatings": [
+                            "Heat Pump"
+                        ],
+                        "protections": [
+                            "BubbleBlanket"
+                        ],
+                        "cleanings": [
+                            "Manual"
+                        ],
+                        "filtrations": [
+                            "Glass"
+                        ]
+                    },
+                    "geoloc": {
+                        "country": "Netherlands",
+                        "country_code": "NL",
+                        "administrative_area_level_2": {
+                            "long_name": "Example City",
+                            "short_name": "Example City"
+                        },
+                        "city": "'Example City",
+                        "administrative_area_level_1": {
+                            "long_name": "Example State",
+                            "short_name": "EX"
+                        },
+                        "lon": 1.000000000000000,
+                        "lat": 1.000000000000000,
+                        "zip_code": "1234"
+                    },
+                    "ph_regulation": {},
+                    "filter_pump": {
+                        "is_present": true,
+                        "operating_type": "Scheduled",
+                        "operating_hours": [
+                            {
+                                "start": "2020-07-31T06:00:00Z",
+                                "end": "2020-07-31T18:00:00Z"
+                            }
+                        ]
+                    },
+                    "picture": {}
+                },
+                "chemical": {},
+                "created": "2020-07-31T15:26:41.621Z",
+                "name": "Example Pool",
+                "custom_settings": {
+                    "measure_ranges": {
+                        "temperature": {},
+                        "ph": {},
+                        "orp": {},
+                        "conductivity": {}
+                    }
+                },
+                "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db",
+                "updated": "2020-08-13T23:43:56.998Z",
+                "sigfox_global_coverage": {
+                    "robustness": 3,
+                    "score": 36,
+                    "margins": [
+                        43,
+                        41,
+                        39
+                    ],
+                    "redundancy": 3,
+                    "level": 8
+                }
+            },
+            "role": "FIRST_ADMINISTRATOR",
+            "name": "Example Pool",
+            "swimming_pool_id": "20d3be3a-6627-4cba-9939-40fb13d0d1db"
+        }
+    ]
+}

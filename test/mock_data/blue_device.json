@@ -1,0 +1,33 @@
+{
+    "__description__": "call to <api_base_url>/blue/<blue_serial>",
+    "serial": "1234567890",
+    "sn": "1234567890",
+    "hw_generation": 2,
+    "hw_product_type": "go",
+    "hw_product_pack": "go",
+    "hw_product_name": "Blue Connect",
+    "hw_sf_zone": "rc1",
+    "hw_sf_country": "NL",
+    "last_measure_ble": "2020-08-15T10:34:48.511Z",
+    "last_measure_sigfox": "2020-08-17T17:57:21.000Z",
+    "state": {
+        "sleep_state": "awake"
+    },
+    "contract_isBasic": false,
+    "contract_isGo": true,
+    "contract_isSwaUs": false,
+    "contract_isVpcEligible": false,
+    "contract_servicePlan": "plus",
+    "contract_isMarketPlaceEligible": false,
+    "location": {
+        "support": "none",
+        "location": "pool"
+    },
+    "hw_has_screw": true,
+    "flash_settings_to_apply": {
+        "sigfox_enabled": 1,
+        "wake_period": 4320
+    },
+    "reseller_channel": "gre_01",
+    "battery_low": false
+}
