@@ -12,7 +12,7 @@ setup(
     name="blueconnect",
     version=VERSION,
     url="https://github.com/marcelveldt/python-blueconnect",
-    download_url="hhttps://github.com/marcelveldt/python-blueconnect",
+    download_url="https://github.com/marcelveldt/python-blueconnect",
     author="Marcel van der Veldt",
     author_email="m.vanderveldt@outlook.com",
     description="Unofficial API client for Blue Riiot/Blue Connect devices.",
