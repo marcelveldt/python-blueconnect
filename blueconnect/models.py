@@ -9,7 +9,6 @@ from typing import List
 import inflection
 from dateutil.parser import isoparse
 
-# pylint:disable=too-many-instance-attributes
 
 def transform_value(value, value_type):
     """Helper method to transform raw api value to correct type."""
@@ -65,6 +64,7 @@ class MeasurementTrend(Enum):
     STABLE = "stable"
     INCREASE = "increase"
     DECREASE = "decrease"
+    UNDEFINED = "undefined"
 
 
 @dataclass
