@@ -1,4 +1,4 @@
-aiohttp
-aws-request-signer
-python-dateutil
-inflection
+aws-request-signer==1.0.0
+aiohttp==3.6.2
+python-dateutil==2.8.1
+inflection==0.5.1
