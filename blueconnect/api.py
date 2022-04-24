@@ -49,7 +49,7 @@ class BlueConnectApi:
 
     async def get_user(self) -> User:
         """Retrieve details of logged-in user."""
-        data = await self.__get_data(f"user")
+        data = await self.__get_data("user")
         return User.from_json(data)
 
     async def get_blue_device(self, blue_device_serial: str) -> BlueDevice:
@@ -59,7 +59,7 @@ class BlueConnectApi:
 
     async def get_swimming_pools(self) -> List[SwimmingPool]:
         """Retrieve all swimming pools."""
-        data = await self.__get_data(f"swimming_pool")
+        data = await self.__get_data("swimming_pool")
         return [SwimmingPool.from_json(item["swimming_pool"]) for item in data["data"]]
 
     async def get_swimming_pool(self, swimming_pool_id: str) -> SwimmingPool:
@@ -115,7 +115,7 @@ class BlueConnectApi:
         ) as response:
             if response.status != 200:
                 error_msg = await response.text()
-                raise Exception("Error logging in user: %s" % error_msg)
+                raise Exception(f"Error logging in user: {error_msg}")
             result = await response.json()
             self._token_info = result
             self._token_info["expires"] = time.time() + 3500
@@ -140,7 +140,6 @@ class BlueConnectApi:
             if response.status != 200:
                 error_msg = await response.text()
                 raise Exception(
-                    "Error while retrieving data for endpoint %s: %s"
-                    % (endpoint, error_msg)
+                    f"Error while retrieving data for endpoint {endpoint}: {error_msg}"
                 )
             return await response.json()

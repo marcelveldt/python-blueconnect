@@ -1,6 +1,5 @@
 """Unofficial python library for the Blue Riiot Blue Connect API."""
 
-import asyncio
 from typing import List
 
 from .api import BlueConnectApi

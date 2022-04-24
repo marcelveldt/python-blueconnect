@@ -11,7 +11,7 @@ from dateutil.parser import isoparse
 
 
 def transform_value(value, value_type):
-    """Helper method to transform raw api value to correct type."""
+    """Transform raw api value to correct type."""
     if value_type in (str, int, float, bool):
         return value
     if value_type == datetime:
@@ -99,7 +99,7 @@ class SwimmingPoolLastMeasurements(ModelBase):
 
     @property
     def measurements(self):
-        """Convenience attribute to get all (current) measurements."""
+        """Get all (current) measurements."""
         return self.data
 
 
@@ -199,7 +199,7 @@ class SwimmingPoolFeed(ModelBase):
 
     @property
     def messages(self):
-        """Convenience attribute to get all feed messages."""
+        """Get all feed messages."""
         return self.data
 
     @property
