@@ -1,6 +1,6 @@
 -r requirements.txt
--r requirements_lint.txt
--r requirements_test.txt
-tox==3.14.6
-
--e .
+black==19.10b0
+flake8==3.7.9
+mypy==0.770
+pydocstyle==5.0.2
+pylint==2.4.4
